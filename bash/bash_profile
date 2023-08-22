@@ -17,7 +17,7 @@ export GIT_PAGER='cat'
 export GPG_TTY=$(tty)
 export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
 export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
-export PS1=$'(alpine) \u2192 '
+export PS1=$' (alpine) \u2192 '
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 path() {
