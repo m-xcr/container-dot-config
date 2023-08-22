@@ -1,0 +1,11 @@
+#!/usr/bin/env emacs --script
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
+(add-to-list 'load-path (concat user-emacs-directory "ronchi"))
+(require 'ronchi-package)
+(ronchi/install-packages
+ '("company" "expand-region" "go-mode" "lispy"
+   "marginalia" "markdown-mode" "pinentry"
+   "rg" "vertico" "which-key" "yaml-mode"))
