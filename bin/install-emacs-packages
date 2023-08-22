@@ -7,5 +7,5 @@
 (require 'ronchi-package)
 (ronchi/install-packages
  '("company" "expand-region" "go-mode" "lispy"
-   "marginalia" "markdown-mode" "pinentry"
+   "magit" "marginalia" "markdown-mode" "pinentry"
    "rg" "vertico" "which-key" "yaml-mode"))
