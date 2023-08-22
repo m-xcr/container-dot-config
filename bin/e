@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec emacs -nw -nsl --no-init-file --no-splash -l $XDG_CONFIG_HOME/emacs/minimal-init.el "$@"

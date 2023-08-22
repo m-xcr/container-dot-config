@@ -1,0 +1,5 @@
+# see answers in https://stackoverflow.com/questions/7888387/the-way-to-distinguish-command-mode-and-insert-mode-in-bashs-vi-command-line-ed#32614367
+set show-mode-in-prompt on
+set emacs-mode-string "+"
+set vi-ins-mode-string "+"
+set vi-cmd-mode-string ":"

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rg --json "$@" \
+  | while read -r; do
+      jq -r 'select(.type == "match") | [.data.path.text,.data.line_number,.data.submatches[0].start] | @tsv'
+    done \
+  | fzf \
+      --delimiter '\t' \
+      --with-nth 1 \
+      --preview 'bat --color=always --style=plain --highlight-line {2} {1}' \
+      --bind 'ctrl-j:execute($EDITOR +{2}:{3} {1})'

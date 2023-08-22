@@ -1,0 +1,9 @@
+#!/bin/sh
+
+target=${1-$PWD}
+
+exec emacs -nw \
+      -nsl \
+      --no-init-file \
+      --load "${XDG_CONFIG_HOME}"/emacs/minimal-init.el \
+      --eval "(progn (package-initialize t) (package-activate 'magit) (magit-status \"$target\") (delete-other-windows))"

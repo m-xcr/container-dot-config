@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# A UNIX input filter that, for each line that matches a todo item,
+# toggles its done state, i.e.
+# * "[ ]" becomes "[X]"
+# * "[X]" becomes "[ ]".
+
+while IFS= read -r line; do
+  if echo "${line}" | grep -q '\[ \]'; then
+    echo "${line}" | sed 's/\[ \]/[X]/'
+  elif echo "${line}" | grep -q '\[X\]'; then
+    echo "${line}" | sed 's/\[X\]/[ ]/'
+  else
+    echo "${line}"
+  fi
+done
